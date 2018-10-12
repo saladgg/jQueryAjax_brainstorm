@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery animation</title>
+    <script src="../resources/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../resources/bootstrap.min.css">
+</head>
+
+<body style="text-align:center">
+    <h1>Animation presentation</h1>
+    <div class="container">
+        <div class="jumbotron">
+            <button id="btn1" class="btn btn-primary">Button 1</button>
+            <button id="btn2" class="btn btn-primary">Button 2</button>
+            <button id="btn3" class="btn btn-primary">Button 3</button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>
+                    By default, all HTML elements have a static position, and cannot be moved. To manipulate the
+                    position, remember to first set the CSS position property of the element to relative, fixed, or
+                    absolute!
+                </h3>
+                <div id="panel1" class="panel panel-primary" style="position:relative">
+                    <div class="panel-heading">PANEL 1 HEADING</div>
+                    <div class="panel-body">PANEL ONE BODY</div>
+                    <div class="panel-footer">PANEL FOOTER</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="panel2" class="panel panel-primary">
+                    <div class="panel-heading">PANEL 2 HEADING</div>
+                    <div class="panel-body">PANEL 2 BODY</div>
+                    <div class="panel-footer">PANEL 2 FOOTER</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        setInterval(function () {
+            $('#panel1').animate({
+                height: 'toggle'
+            })
+        }, 2000)
+
+        $('#btn2').click(function () {
+            $('#panel2').animate({
+                height: 'toggle'
+            });
+
+        });
+
+
+
+
+
+
+
+
+
+    });
+</script>
+
+</html>

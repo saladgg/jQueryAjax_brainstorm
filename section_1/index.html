@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../resources/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../resources/bootstrap.min.css">
+</head>
+
+<body style="text-align:center">
+    <h1>General jQuery brainstorm ..</h1>
+    <p id="p1">jQuery is an ocean of fun, you choose how deep you can swiim!</p>
+    <div class="container">
+        <div class="jumbotron">
+            <button id="btn1" class="btn btn-primary">Button 1</button>
+            <button id="btn2" class="btn btn-primary">Button 2</button>
+            <button id="btn3" class="btn btn-primary">Button 3</button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div id="panel1" class="panel panel-primary">
+                    <div class="panel-heading">PANEL 1 HEADING</div>
+                    <div class="panel-body">PANEL ONE BODY</div>
+                    <div class="panel-footer">PANEL FOOTER</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="panel2" class="panel panel-primary">
+                    <div class="panel-heading">PANEL 2 HEADING</div>
+                    <div class="panel-body">PANEL 2 BODY</div>
+                    <div class="panel-footer">PANEL 2 FOOTER</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="panel3" class="panel panel-primary">
+                    <div class="panel-heading">PANEL 3 HEADING</div>
+                    <div class="panel-body">PANEL 3 BODY</div>
+                    <div class="panel-footer">PANEL 3 FOOTER</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(function () {
+        $('h1').css({ color: 'red' });
+        $('#p1').css({ 'font-weight': 'bold' })
+        $('#panel1').hide(3000).show(1000);
+        $('#panel2').slideUp(2000).delay(1000).slideDown(2000);
+        $('#panel3').fadeToggle(2000).fadeToggle(1000)
+
+        $('#btn3').mouseover(function () {
+            $('#panel3').fadeOut(2000);
+        })
+
+        $('#btn1').click(function () {
+            $('#panel1').toggle().css({ color: 'red' });
+        })
+
+    })
+</script>
+
+</html>

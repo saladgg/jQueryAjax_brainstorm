@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax</title>
+
+    <link rel="stylesheet" href="../resources/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>AJAX playground</h1>
+            <p>AJAX{J} -- Asynchronous JavaScript and Xml. Now {Json}, retained the original name for taste of tongue</p>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <h2>Add post</h2>
+                    <p> <label for="userId">User ID: </label><input type="text" id="userId"></p>
+                    <p><label for="id">Post ID: </label><input type="text" id="id"></p>
+                    <p><label for="title">Title: </label><input type="text" id="title"></p>
+                    <textarea placeholder="type your post here . . ." id="body" cols="40" rows="7"></textarea><br><br>
+                    <button type="submit" class="btn btn-primary" id="submit">Send</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>POSTS </h3>
+                <ol id="posts"></ol>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../resources/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
